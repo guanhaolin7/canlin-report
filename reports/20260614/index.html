@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股貨宅CanLin｜科技財經戰略簡報</title>
+  <meta name="description" content="股貨宅CanLin 2026/06/15 科技財經戰略簡報，3:4 圖卡滑讀版。">
+  <meta property="og:title" content="股貨宅CanLin｜科技財經戰略簡報">
+  <meta property="og:description" content="現貨守支撐低接主流，期貨結算週短打控風險。">
+  <meta property="og:image" content="assets/page01.jpg">
+  <style>
+    :root {
+      --purple: #4b19d8;
+      --purple-deep: #24105f;
+      --green: #9dff2e;
+      --ink: #080b22;
+      --muted: #667085;
+      --bg: #f7f8fc;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(157,255,46,.18), transparent 28rem),
+        radial-gradient(circle at top left, rgba(75,25,216,.12), transparent 26rem),
+        var(--bg);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 16px clamp(16px, 4vw, 48px);
+      background: rgba(247,248,252,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(75,25,216,.18);
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .brand {
+      font-weight: 900;
+      letter-spacing: .02em;
+      font-size: clamp(18px, 2.3vw, 28px);
+      color: var(--purple-deep);
+    }
+    .date-chip {
+      padding: 8px 14px;
+      border: 2px solid var(--purple);
+      color: var(--purple);
+      border-radius: 999px;
+      font-weight: 900;
+      background: #fff;
+      white-space: nowrap;
+    }
+    nav {
+      max-width: 1180px;
+      margin: 14px auto 0;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: var(--purple-deep);
+      background: #fff;
+      border: 1px solid rgba(75,25,216,.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    nav a:hover {
+      background: var(--purple);
+      color: #fff;
+    }
+    .hero {
+      max-width: 1180px;
+      margin: 34px auto 20px;
+      padding: 0 clamp(16px, 4vw, 48px);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 6vw, 72px);
+      line-height: 1.03;
+      letter-spacing: -.04em;
+      color: var(--ink);
+    }
+    .hero p {
+      margin: 0;
+      font-size: clamp(16px, 2vw, 24px);
+      font-weight: 800;
+      color: var(--purple-deep);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px clamp(16px, 4vw, 48px) 80px;
+    }
+    .page {
+      margin: 30px auto 48px;
+      max-width: 860px;
+      scroll-margin-top: 126px;
+    }
+    .caption {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 12px;
+    }
+    .caption h2 {
+      margin: 0;
+      font-size: clamp(18px, 2.2vw, 28px);
+      color: var(--purple-deep);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 74px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--purple);
+      color: #fff;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .page img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 24px 70px rgba(36,16,95,.18);
+      border: 1px solid rgba(75,25,216,.16);
+    }
+    .disclaimer {
+      max-width: 860px;
+      margin: 54px auto 0;
+      padding: 16px 18px;
+      border-left: 6px solid var(--green);
+      background: rgba(255,255,255,.72);
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    footer {
+      padding: 26px 16px 42px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 720px) {
+      header { padding: 12px 12px; }
+      .topbar { align-items: flex-start; }
+      .date-chip { font-size: 13px; padding: 7px 10px; }
+      nav a { font-size: 12px; padding: 7px 10px; }
+      .page { margin: 22px auto 36px; }
+      .page img { border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">股貨宅CanLin｜戰略情報簡報</div>
+      <div class="date-chip">2026/06/15</div>
+    </div>
+    <nav aria-label="頁面導覽">
+        <a href="#p01">01 科技財經戰略簡報</a>
+        <a href="#p02">02 TL;DR｜本週核心結論</a>
+        <a href="#p03">03 股貨宅現貨觀點｜現貨結構圖</a>
+        <a href="#p04">04 主流題材矩陣｜現貨選股地圖</a>
+        <a href="#p05">05 現貨操作劇本｜樂觀・中性・防守</a>
+        <a href="#p06">06 期靈王期貨觀點｜日K・60K 路徑圖</a>
+        <a href="#p07">07 期貨短沖與選擇權｜5K關卡＋結算區間</a>
+        <a href="#p08">08 權值核心與帶頭股｜台積電＋主流代表</a>
+        <a href="#p09">09 明日驗證 Checklist｜執行SOP</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>科技財經戰略簡報</h1>
+    <p>現貨守支撐低接主流；期貨結算週依關卡短打。</p>
+  </div>
+
+  <main>
+      <section class="page" id="p01">
+        <div class="caption"><span class="badge">page01</span><h2>科技財經戰略簡報</h2></div>
+        <img src="assets/page01.jpg" alt="page01｜科技財經戰略簡報" loading="lazy">
+      </section>
+      <section class="page" id="p02">
+        <div class="caption"><span class="badge">page02</span><h2>TL;DR｜本週核心結論</h2></div>
+        <img src="assets/page02.jpg" alt="page02｜TL;DR｜本週核心結論" loading="lazy">
+      </section>
+      <section class="page" id="p03">
+        <div class="caption"><span class="badge">page03</span><h2>股貨宅現貨觀點｜現貨結構圖</h2></div>
+        <img src="assets/page03.jpg" alt="page03｜股貨宅現貨觀點｜現貨結構圖" loading="lazy">
+      </section>
+      <section class="page" id="p04">
+        <div class="caption"><span class="badge">page04</span><h2>主流題材矩陣｜現貨選股地圖</h2></div>
+        <img src="assets/page04.jpg" alt="page04｜主流題材矩陣｜現貨選股地圖" loading="lazy">
+      </section>
+      <section class="page" id="p05">
+        <div class="caption"><span class="badge">page05</span><h2>現貨操作劇本｜樂觀・中性・防守</h2></div>
+        <img src="assets/page05.jpg" alt="page05｜現貨操作劇本｜樂觀・中性・防守" loading="lazy">
+      </section>
+      <section class="page" id="p06">
+        <div class="caption"><span class="badge">page06</span><h2>期靈王期貨觀點｜日K・60K 路徑圖</h2></div>
+        <img src="assets/page06.jpg" alt="page06｜期靈王期貨觀點｜日K・60K 路徑圖" loading="lazy">
+      </section>
+      <section class="page" id="p07">
+        <div class="caption"><span class="badge">page07</span><h2>期貨短沖與選擇權｜5K關卡＋結算區間</h2></div>
+        <img src="assets/page07.jpg" alt="page07｜期貨短沖與選擇權｜5K關卡＋結算區間" loading="lazy">
+      </section>
+      <section class="page" id="p08">
+        <div class="caption"><span class="badge">page08</span><h2>權值核心與帶頭股｜台積電＋主流代表</h2></div>
+        <img src="assets/page08.jpg" alt="page08｜權值核心與帶頭股｜台積電＋主流代表" loading="lazy">
+      </section>
+      <section class="page" id="p09">
+        <div class="caption"><span class="badge">page09</span><h2>明日驗證 Checklist｜執行SOP</h2></div>
+        <img src="assets/page09.jpg" alt="page09｜明日驗證 Checklist｜執行SOP" loading="lazy">
+      </section>
+
+    <div class="disclaimer">
+      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險。
+    </div>
+  </main>
+
+  <footer>
+    © 股貨宅CanLin｜戰略情報簡報
+  </footer>
+</body>
+</html>
