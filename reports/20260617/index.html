@@ -68,19 +68,23 @@
     footer {
       max-width: 980px;
       margin: 0 auto 34px;
-      color: #4a4661;
-      font-size: 14px;
-      line-height: 1.7;
       padding: 0 16px;
     }
-    .badge {
-      display: inline-block;
-      background: var(--purple);
-      color: #fff;
-      border-radius: 999px;
-      padding: 4px 12px;
-      margin-right: 8px;
-      font-weight: 900;
+    .disclaimer {
+      background: rgba(255,255,255,.92);
+      border-left: 5px solid var(--green);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(34,16,111,.08);
+      color: #5b566f;
+      font-size: 13px;
+      line-height: 1.7;
+      padding: 14px 18px;
+    }
+    .copyright {
+      color: #817c92;
+      font-size: 12px;
+      margin: 12px 4px 0;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -134,7 +138,8 @@
       </section>
   </main>
   <footer>
-    <p><span class="badge">CanLin</span>本頁面使用固定檔名引用 assets/page01.jpg 至 assets/page09.jpg，可直接部署至 GitHub Pages。</p>
+    <div class="disclaimer">本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險。</div>
+    <p class="copyright">© 股貨宅CanLin｜戰略情報簡報</p>
   </footer>
 </body>
 </html>
