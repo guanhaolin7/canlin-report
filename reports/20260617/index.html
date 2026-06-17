@@ -32,7 +32,7 @@
     .title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     h1 { margin: 0; color: var(--purple); font-size: clamp(20px, 3vw, 32px); line-height: 1.2; font-weight: 900; }
     .meta { color: var(--purple-2); font-weight: 800; white-space: nowrap; }
-    .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .nav { display: flex; flex-wrap: nowrap; gap: 8px; margin-top: 10px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: thin; }
     .nav a {
       text-decoration: none;
       color: var(--purple);
@@ -40,11 +40,14 @@
       border-radius: 999px;
       padding: 6px 12px;
       font-weight: 800;
-      font-size: 14px;
+      font-size: 13px;
+      flex: 0 0 auto;
       line-height: 1.25;
       background: #fff;
       white-space: nowrap;
     }
+    .nav::-webkit-scrollbar { height: 6px; }
+    .nav::-webkit-scrollbar-thumb { background: rgba(34,16,111,.24); border-radius: 999px; }
     main { max-width: 980px; margin: 0 auto; padding: 22px 12px 60px; }
     .page-card {
       margin: 0 auto 28px;
@@ -88,7 +91,7 @@
         <h1>股貨宅CanLin｜戰略情報簡報</h1>
         <div class="meta">2026.06.17｜3:4</div>
       </div>
-      <nav class="nav" aria-label="簡報頁碼與標題">
+      <nav class="nav" aria-label="簡報頁碼與標題" title="左右滑動切換目錄">
         <a href="#page01">01｜端午前後台股戰略總覽</a>
         <a href="#page02">02｜TL;DR｜總濃縮與市場共識</a>
         <a href="#page03">03｜大盤結構｜關鍵價位與攻防</a>
