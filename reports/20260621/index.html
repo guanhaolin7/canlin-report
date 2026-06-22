@@ -2,68 +2,144 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#32106b">
-  <meta name="description" content="股貨宅CanLin｜AI主流與融資風險戰略情報簡報">
-  <title>股貨宅CanLin｜戰略情報簡報</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股貨宅CanLin｜2026.06.21 戰略情報簡報</title>
+  <meta name="description" content="2026.06.21 台股AI主流、融資風險、產業接棒與操作劇本戰略情報簡報。">
+  <style>
+    :root {
+      --purple: #22106f;
+      --purple-2: #3d1795;
+      --green: #38d600;
+      --bg: #f5f5fa;
+      --text: #15121e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 58%, #eceaf4 100%);
+      color: var(--text);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(34,16,111,.18);
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 14px 16px; }
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    h1 { margin: 0; color: var(--purple); font-size: clamp(20px, 3vw, 32px); line-height: 1.2; font-weight: 900; }
+    .meta { color: var(--purple-2); font-weight: 800; white-space: nowrap; }
+    .nav { display: flex; flex-wrap: nowrap; gap: 8px; margin-top: 10px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: thin; }
+    .nav a {
+      text-decoration: none;
+      color: var(--purple);
+      border: 1px solid rgba(34,16,111,.28);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 800;
+      font-size: 13px;
+      flex: 0 0 auto;
+      line-height: 1.25;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .nav::-webkit-scrollbar { height: 6px; }
+    .nav::-webkit-scrollbar-thumb { background: rgba(34,16,111,.24); border-radius: 999px; }
+    main { max-width: 980px; margin: 0 auto; padding: 22px 12px 60px; }
+    .page-card {
+      margin: 0 auto 28px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 14px 36px rgba(34,16,111,.16);
+      overflow: hidden;
+      border: 1px solid rgba(34,16,111,.10);
+    }
+    .page-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      background: #fff;
+    }
+    footer {
+      max-width: 980px;
+      margin: 0 auto 34px;
+      padding: 0 16px;
+    }
+    .disclaimer {
+      background: rgba(255,255,255,.92);
+      border-left: 5px solid var(--green);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(34,16,111,.08);
+      color: #5b566f;
+      font-size: 13px;
+      line-height: 1.7;
+      padding: 14px 18px;
+    }
+    .copyright {
+      color: #817c92;
+      font-size: 12px;
+      margin: 12px 4px 0;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand-row">
-      <div>
-        <p class="brand">股貨宅CanLin｜戰略情報簡報</p>
-        <h1>AI主流沒有結束，但籌碼已轉黃燈</h1>
+  <header>
+    <div class="wrap">
+      <div class="title-row">
+        <h1>股貨宅CanLin｜戰略情報簡報</h1>
+        <div class="meta">2026.06.21｜3:4</div>
       </div>
-      <time datetime="2026-06-21">2026.06.21</time>
+      <nav class="nav" aria-label="簡報頁碼與標題" title="左右滑動切換目錄">
+        <a href="#page01">01｜AI主流與籌碼風險總覽</a>
+        <a href="#page02">02｜TL;DR｜高檔驗證與時間雷達</a>
+        <a href="#page03">03｜大盤結構｜關鍵價位與攻防</a>
+        <a href="#page04">04｜融資警報｜籌碼風險傳導</a>
+        <a href="#page05">05｜AI泡沫｜風險端與支撐端</a>
+        <a href="#page06">06｜產業接棒｜下半年輪動矩陣</a>
+        <a href="#page07">07｜研究清單｜公開產業代表</a>
+        <a href="#page08">08｜四套劇本｜樂觀・中性・防守</a>
+        <a href="#page09">09｜明日驗證｜Checklist × 行動 SOP</a>
+      </nav>
     </div>
-    <nav class="page-tabs" aria-label="簡報目錄">
-      <a href="#page01" data-page="page01">01 封面</a>
-      <a href="#page02" data-page="page02">02 快速結論</a>
-      <a href="#page03" data-page="page03">03 現貨關卡</a>
-      <a href="#page04" data-page="page04">04 融資警報</a>
-      <a href="#page05" data-page="page05">05 AI泡沫</a>
-      <a href="#page06" data-page="page06">06 產業接棒</a>
-      <a href="#page07" data-page="page07">07 研究清單</a>
-      <a href="#page08" data-page="page08">08 四套劇本</a>
-      <a href="#page09" data-page="page09">09 行動SOP</a>
-    </nav>
   </header>
-
-  <main class="report" aria-label="戰略情報簡報">
-    <figure id="page01" class="slide"><img src="assets/page01.jpg" alt="第1頁：AI主流沒有結束，但籌碼已轉黃燈" width="1080" height="1440"></figure>
-    <figure id="page02" class="slide"><img src="assets/page02.jpg" alt="第2頁：市場高檔驗證與時間雷達" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page03" class="slide"><img src="assets/page03.jpg" alt="第3頁：現貨支撐壓力與多頭劇本" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page04" class="slide"><img src="assets/page04.jpg" alt="第4頁：融資領先警報" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page05" class="slide"><img src="assets/page05.jpg" alt="第5頁：AI泡沫風險與基本面支撐" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page06" class="slide"><img src="assets/page06.jpg" alt="第6頁：下半年產業接棒矩陣" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page07" class="slide"><img src="assets/page07.jpg" alt="第7頁：公開可驗證研究清單" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page08" class="slide"><img src="assets/page08.jpg" alt="第8頁：樂觀中性防守與高檔風控劇本" width="1080" height="1440" loading="lazy"></figure>
-    <figure id="page09" class="slide"><img src="assets/page09.jpg" alt="第9頁：下一交易日驗證與行動SOP" width="1080" height="1440" loading="lazy"></figure>
+  <main>
+    <section class="page-card" id="page01">
+      <img src="assets/page01.jpg" alt="page01 AI主流與籌碼風險總覽" loading="lazy">
+    </section>
+    <section class="page-card" id="page02">
+      <img src="assets/page02.jpg" alt="page02 TL;DR｜高檔驗證與時間雷達" loading="lazy">
+    </section>
+    <section class="page-card" id="page03">
+      <img src="assets/page03.jpg" alt="page03 大盤結構｜關鍵價位與攻防" loading="lazy">
+    </section>
+    <section class="page-card" id="page04">
+      <img src="assets/page04.jpg" alt="page04 融資警報｜籌碼風險傳導" loading="lazy">
+    </section>
+    <section class="page-card" id="page05">
+      <img src="assets/page05.jpg" alt="page05 AI泡沫｜風險端與支撐端" loading="lazy">
+    </section>
+    <section class="page-card" id="page06">
+      <img src="assets/page06.jpg" alt="page06 產業接棒｜下半年輪動矩陣" loading="lazy">
+    </section>
+    <section class="page-card" id="page07">
+      <img src="assets/page07.jpg" alt="page07 研究清單｜公開產業代表" loading="lazy">
+    </section>
+    <section class="page-card" id="page08">
+      <img src="assets/page08.jpg" alt="page08 四套劇本｜樂觀・中性・防守" loading="lazy">
+    </section>
+    <section class="page-card" id="page09">
+      <img src="assets/page09.jpg" alt="page09 明日驗證｜Checklist × 行動 SOP" loading="lazy">
+    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="disclaimer">
-      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險
-    </div>
-    <p>股貨宅CanLin｜2026.06.21</p>
+  <footer>
+    <div class="disclaimer">本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險。</div>
+    <p class="copyright">© 股貨宅CanLin｜戰略情報簡報</p>
   </footer>
-
-  <script>
-    const links = [...document.querySelectorAll('.page-tabs a')];
-    const sections = [...document.querySelectorAll('.slide')];
-    const activate = (id) => {
-      links.forEach((link) => link.classList.toggle('active', link.dataset.page === id));
-      const active = links.find((link) => link.dataset.page === id);
-      active?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    };
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries.filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) activate(visible.target.id);
-    }, { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.25, 0.5] });
-    sections.forEach((section) => observer.observe(section));
-    activate('page01');
-  </script>
 </body>
 </html>
