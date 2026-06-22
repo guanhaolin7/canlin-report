@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#32106b">
+  <meta name="description" content="股貨宅CanLin｜AI主流與融資風險戰略情報簡報">
+  <title>股貨宅CanLin｜戰略情報簡報</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-row">
+      <div>
+        <p class="brand">股貨宅CanLin｜戰略情報簡報</p>
+        <h1>AI主流沒有結束，但籌碼已轉黃燈</h1>
+      </div>
+      <time datetime="2026-06-21">2026.06.21</time>
+    </div>
+    <nav class="page-tabs" aria-label="簡報目錄">
+      <a href="#page01" data-page="page01">01 封面</a>
+      <a href="#page02" data-page="page02">02 快速結論</a>
+      <a href="#page03" data-page="page03">03 現貨關卡</a>
+      <a href="#page04" data-page="page04">04 融資警報</a>
+      <a href="#page05" data-page="page05">05 AI泡沫</a>
+      <a href="#page06" data-page="page06">06 產業接棒</a>
+      <a href="#page07" data-page="page07">07 研究清單</a>
+      <a href="#page08" data-page="page08">08 四套劇本</a>
+      <a href="#page09" data-page="page09">09 行動SOP</a>
+    </nav>
+  </header>
+
+  <main class="report" aria-label="戰略情報簡報">
+    <figure id="page01" class="slide"><img src="assets/page01.jpg" alt="第1頁：AI主流沒有結束，但籌碼已轉黃燈" width="1080" height="1440"></figure>
+    <figure id="page02" class="slide"><img src="assets/page02.jpg" alt="第2頁：市場高檔驗證與時間雷達" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page03" class="slide"><img src="assets/page03.jpg" alt="第3頁：現貨支撐壓力與多頭劇本" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page04" class="slide"><img src="assets/page04.jpg" alt="第4頁：融資領先警報" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page05" class="slide"><img src="assets/page05.jpg" alt="第5頁：AI泡沫風險與基本面支撐" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page06" class="slide"><img src="assets/page06.jpg" alt="第6頁：下半年產業接棒矩陣" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page07" class="slide"><img src="assets/page07.jpg" alt="第7頁：公開可驗證研究清單" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page08" class="slide"><img src="assets/page08.jpg" alt="第8頁：樂觀中性防守與高檔風控劇本" width="1080" height="1440" loading="lazy"></figure>
+    <figure id="page09" class="slide"><img src="assets/page09.jpg" alt="第9頁：下一交易日驗證與行動SOP" width="1080" height="1440" loading="lazy"></figure>
+  </main>
+
+  <footer class="site-footer">
+    <div class="disclaimer">
+      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險
+    </div>
+    <p>股貨宅CanLin｜2026.06.21</p>
+  </footer>
+
+  <script>
+    const links = [...document.querySelectorAll('.page-tabs a')];
+    const sections = [...document.querySelectorAll('.slide')];
+    const activate = (id) => {
+      links.forEach((link) => link.classList.toggle('active', link.dataset.page === id));
+      const active = links.find((link) => link.dataset.page === id);
+      active?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    };
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) activate(visible.target.id);
+    }, { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.25, 0.5] });
+    sections.forEach((section) => observer.observe(section));
+    activate('page01');
+  </script>
+</body>
+</html>
