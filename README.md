@@ -14,3 +14,4 @@
 - [20260616 報告](https://guanhaolin7.github.io/canlin-report/reports/20260616/)
 - [20260617 報告](https://guanhaolin7.github.io/canlin-report/reports/20260617/)
 - [20260621 報告](https://guanhaolin7.github.io/canlin-report/reports/20260621/)
+- [20260622 報告](https://guanhaolin7.github.io/canlin-report/reports/20260622/)
