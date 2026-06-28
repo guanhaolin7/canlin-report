@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股貨宅CanLin｜2026/06/29 戰略情報簡報</title>
+  <meta name="description" content="股貨宅CanLin 2026/06/29 科技財經圖卡簡報">
+  <style>
+    :root {
+      --purple: #24105f;
+      --purple-2: #3c168f;
+      --green: #8cff00;
+      --ink: #111111;
+      --muted: #666a78;
+      --paper: #f7f8fc;
+      --line: #deddeb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(140, 255, 0, .12), transparent 28rem),
+        linear-gradient(180deg, #ffffff 0%, var(--paper) 28rem);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(36, 16, 95, .14);
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(14px);
+    }
+
+    .bar {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 14px 0 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--purple);
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-size: clamp(18px, 4vw, 28px);
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 14px;
+      height: 34px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--green), var(--purple));
+      flex: 0 0 auto;
+    }
+
+    .date {
+      font-size: clamp(14px, 3vw, 18px);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tabs a {
+      flex: 0 0 auto;
+      padding: 8px 13px;
+      border: 1px solid rgba(36, 16, 95, .22);
+      border-radius: 999px;
+      color: var(--purple);
+      background: #fff;
+      text-decoration: none;
+      font-weight: 850;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .tabs a:first-child {
+      background: var(--purple);
+      color: #fff;
+      border-color: var(--purple);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 28px));
+      margin: 24px auto 56px;
+    }
+
+    .hero {
+      margin: 0 0 22px;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--line);
+      border-left: 8px solid var(--green);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      color: var(--purple);
+      font-size: clamp(26px, 6vw, 46px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #2d2d34;
+      font-size: clamp(15px, 3.6vw, 19px);
+      line-height: 1.65;
+      font-weight: 650;
+    }
+
+    .deck {
+      display: grid;
+      gap: 28px;
+    }
+
+    .page {
+      scroll-margin-top: 112px;
+      margin: 0;
+    }
+
+    .page img {
+      display: block;
+      width: min(100%, 760px);
+      height: auto;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 1px solid rgba(36, 16, 95, .16);
+      box-shadow: 0 16px 46px rgba(36, 16, 95, .14);
+      background: #fff;
+    }
+
+    .page figcaption {
+      width: min(100%, 760px);
+      margin: 9px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .disclaimer {
+      margin: 34px auto 0;
+      width: min(100%, 760px);
+      padding: 18px 18px 18px 20px;
+      border: 1px solid var(--line);
+      border-left: 8px solid var(--green);
+      border-radius: 12px;
+      background: #fff;
+      color: #24242b;
+      font-size: 15px;
+      line-height: 1.7;
+      font-weight: 650;
+    }
+
+    .footer {
+      padding: 26px 14px 36px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, var(--purple), var(--purple-2));
+      font-weight: 850;
+    }
+
+    .footer span { color: var(--green); }
+
+    @media (max-width: 640px) {
+      .bar { width: min(100% - 20px, 1120px); }
+      main { width: min(100% - 16px, 1120px); margin-top: 14px; }
+      .brand { align-items: flex-start; }
+      .brand-title { font-size: 18px; }
+      .hero { padding: 15px 14px; }
+      .deck { gap: 18px; }
+      .page img { border-radius: 7px; }
+      .tabs a { padding: 8px 11px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <div class="brand">
+        <div class="brand-title"><span class="brand-mark"></span>股貨宅CanLin｜戰略情報簡報</div>
+        <div class="date">2026/06/29</div>
+      </div>
+      <nav class="tabs" aria-label="頁面導覽">
+        <a href="#page01">01</a>
+        <a href="#page02">02</a>
+        <a href="#page03">03</a>
+        <a href="#page04">04</a>
+        <a href="#page05">05</a>
+        <a href="#page06">06</a>
+        <a href="#page07">07</a>
+        <a href="#page08">08</a>
+        <a href="#page09">09</a>
+        <a href="#page10">10</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>外資提款後，AI 換線再開戰</h1>
+      <p>本頁面固定引用 <strong>assets/page01.jpg～assets/page10.jpg</strong>。第 10 頁為期靈王 31 Plus 台指期日盤附圖。</p>
+    </section>
+
+    <section class="deck" aria-label="CanLin 3:4 科技財經圖卡">
+      <figure id="page01" class="page"><img src="assets/page01.jpg" alt="第 01 頁：外資提款後 AI 換線再開戰"><figcaption>01/10</figcaption></figure>
+      <figure id="page02" class="page"><img src="assets/page02.jpg" alt="第 02 頁：現貨不是猜低點 是等反攻開關"><figcaption>02/10</figcaption></figure>
+      <figure id="page03" class="page"><img src="assets/page03.jpg" alt="第 03 頁：外資提款四千億 但不是全面追空"><figcaption>03/10</figcaption></figure>
+      <figure id="page04" class="page"><img src="assets/page04.jpg" alt="第 04 頁：AI 沒結束 只是資金重新分配"><figcaption>04/10</figcaption></figure>
+      <figure id="page05" class="page"><img src="assets/page05.jpg" alt="第 05 頁：真正雷區不是記憶體 是功率半導體"><figcaption>05/10</figcaption></figure>
+      <figure id="page06" class="page"><img src="assets/page06.jpg" alt="第 06 頁：46688 站不回 反彈仍是弱勢反彈"><figcaption>06/10</figcaption></figure>
+      <figure id="page07" class="page"><img src="assets/page07.jpg" alt="第 07 頁：短線不猜方向 用關卡做金腳金肩"><figcaption>07/10</figcaption></figure>
+      <figure id="page08" class="page"><img src="assets/page08.jpg" alt="第 08 頁：本週不是低波動 是時間價值暴肥"><figcaption>08/10</figcaption></figure>
+      <figure id="page09" class="page"><img src="assets/page09.jpg" alt="第 09 頁：明日不是猜漲跌 而是驗證四件事"><figcaption>09/10</figcaption></figure>
+      <figure id="page10" class="page"><img src="assets/page10.jpg" alt="第 10 頁：期靈王 31 Plus 台指期日盤"><figcaption>10/10</figcaption></figure>
+    </section>
+
+    <section class="disclaimer">
+      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險。
+    </section>
+  </main>
+
+  <footer class="footer">
+    CanLin Research Cards｜<span>持強、分批、等確認</span>
+  </footer>
+</body>
+</html>
