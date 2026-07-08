@@ -1,288 +1,153 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>股貨宅CanLin｜2026.07.08 戰略情報簡報</title>
-  <meta name="description" content="2026.07.08 股貨宅CanLin 戰略情報簡報：股貨宅觀點整合 9 頁圖卡與第 10 頁期靈王台指期夜盤。">
-  <meta property="og:title" content="股貨宅CanLin｜2026.07.08 戰略情報簡報">
-  <meta property="og:description" content="去槓桿、融資清洗、主流輪動、AI 下半場與期靈王台指期夜盤。">
-  <meta property="og:image" content="assets/og-cover.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CanLin 2026/07/08 股貨宅戰略情報簡報</title>
+  <meta name="description" content="CanLin 2026/07/08 股貨宅戰略情報簡報，共 10 頁圖卡。" />
+  <meta property="og:title" content="CanLin 2026/07/08 股貨宅戰略情報簡報" />
+  <meta property="og:image" content="assets/og-cover.png" />
   <style>
     :root {
-      --purple:#19005a;
-      --purple-2:#2a0a77;
-      --green:#75e600;
-      --ink:#08080a;
-      --muted:#666277;
-      --line:#d9d6e7;
-      --bg:#f7f7fb;
-      --card:#ffffff;
-      --danger:#c51f2f;
+      --purple:#1f075e;
+      --purple-2:#2d1478;
+      --green:#7cff00;
+      --bg:#f5f7fb;
+      --ink:#111;
+      --muted:#677085;
+      --card:#fff;
     }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin:0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 48%, #eef1f8 100%);
       color:var(--ink);
-      background:radial-gradient(circle at 10% 0%, rgba(117,230,0,.12), transparent 28%), linear-gradient(180deg,#fff 0%, var(--bg) 100%);
     }
-    .topbar {
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background:rgba(255,255,255,.88);
-      border-bottom:1px solid var(--line);
+    header {
+      position: sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(31,7,94,.12);
     }
-    .topbar-inner {
-      max-width:1180px; margin:auto; padding:14px 20px;
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    .wrap { width:min(1180px, 94vw); margin:0 auto; }
+    .hero { padding:20px 0 16px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; flex-direction:column; gap:4px; }
+    .brand h1 { margin:0; font-size:22px; color:var(--purple); letter-spacing:.02em; }
+    .brand p { margin:0; color:var(--muted); font-size:14px; }
+    .badge { background:var(--purple); color:#fff; border-radius:999px; padding:10px 14px; font-weight:800; white-space:nowrap; }
+    nav { display:flex; gap:8px; overflow:auto; padding:0 0 14px; }
+    nav a { flex:0 0 auto; text-decoration:none; color:var(--purple); font-weight:800; border:1px solid rgba(31,7,94,.18); background:#fff; padding:8px 12px; border-radius:999px; }
+    main { padding:28px 0 56px; }
+    .notice {
+      margin-bottom:22px;
+      padding:14px 16px;
+      border:1px solid rgba(124,255,0,.45);
+      background:linear-gradient(90deg, rgba(31,7,94,.06), rgba(124,255,0,.12));
+      border-radius:16px;
+      color:var(--purple);
+      font-weight:700;
     }
-    .brand { display:flex; align-items:center; gap:12px; font-weight:900; color:var(--purple); letter-spacing:.02em; }
-    .brand-mark { width:42px; height:42px; display:grid; place-items:center; background:var(--purple); color:#fff; border-radius:10px; position:relative; overflow:hidden; }
-    .brand-mark::after { content:""; position:absolute; right:-6px; top:8px; width:24px; height:24px; border-top:6px solid var(--green); border-right:6px solid var(--green); transform:rotate(45deg); }
-    .brand small { display:block; font-size:12px; color:var(--muted); font-weight:700; }
-    .nav { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
-    .nav a {
-      text-decoration:none; color:var(--purple); font-weight:900;
-      border:1px solid var(--line); padding:7px 9px; border-radius:10px; background:#fff;
-    }
-    .nav a:hover { background:var(--purple); color:#fff; }
-    .hero {
-      max-width:1180px; margin:32px auto 18px; padding:0 20px;
-      display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:end;
-    }
-    .hero h1 { font-size:clamp(38px, 6vw, 76px); line-height:1.02; margin:0; letter-spacing:-.04em; }
-    .hero h1 span { color:var(--purple); }
-    .hero p { margin:18px 0 0; font-size:20px; line-height:1.55; color:#272232; font-weight:700; }
-    .meta-panel {
-      border:3px solid var(--purple); border-radius:24px; background:#fff; padding:20px;
-      box-shadow:0 18px 42px rgba(25,0,90,.08);
-    }
-    .meta-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
-    .metric { border:1px solid var(--line); border-radius:16px; padding:14px; }
-    .metric b { display:block; color:var(--green); font-size:30px; line-height:1; }
-    .metric span { color:var(--muted); font-weight:800; font-size:14px; }
-    .notice { max-width:1180px; margin:0 auto 26px; padding:0 20px; }
-    .notice-inner {
-      border-left:8px solid var(--green); background:#fff; border-radius:16px; padding:16px 18px;
-      box-shadow:0 10px 28px rgba(25,0,90,.06); font-weight:800; color:#302941;
-    }
-    main { max-width:1180px; margin:auto; padding:0 20px 52px; }
-    .card {
-      background:var(--card); border:1px solid var(--line); border-radius:28px; padding:18px; margin:24px 0;
-      box-shadow:0 20px 50px rgba(25,0,90,.08);
-    }
-    .card-head { display:flex; align-items:center; gap:14px; padding:4px 6px 16px; }
-    .badge {
-      min-width:56px; height:56px; display:grid; place-items:center;
-      background:var(--purple); color:#fff; border-radius:16px; font-size:24px; font-weight:1000;
-      box-shadow:inset 0 -5px 0 rgba(255,255,255,.08);
-    }
-    .card h2 { margin:0; color:var(--purple); font-size:clamp(22px, 3vw, 34px); line-height:1.18; }
-    .card p { margin:6px 0 0; color:var(--muted); font-weight:800; line-height:1.45; }
-    .image-link { display:block; border-radius:20px; overflow:hidden; border:1px solid #eee; background:#fafafa; }
-    .image-link img { display:block; width:100%; height:auto; }
-    .footer { background:var(--purple); color:#fff; padding:28px 20px; }
-    .footer-inner { max-width:1180px; margin:auto; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; }
-    .footer b { color:var(--green); }
-    .footer a { color:#fff; font-weight:900; }
+    .layout { display:grid; grid-template-columns: 1fr 170px; gap:22px; align-items:start; }
+    .pages { display:flex; flex-direction:column; gap:28px; }
+    .page-card { background:var(--card); border-radius:22px; padding:14px; box-shadow:0 18px 42px rgba(31,7,94,.12); border:1px solid rgba(31,7,94,.1); scroll-margin-top:120px; }
+    .page-head { display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--purple); padding:4px 6px 12px; }
+    .page-head span { background:var(--purple); color:#fff; border-radius:999px; padding:7px 10px; font-weight:900; }
+    .page-head strong { font-size:15px; text-align:right; }
+    .page-card img { display:block; width:100%; max-width:760px; margin:0 auto; height:auto; border-radius:10px; border:1px solid rgba(31,7,94,.08); }
+    .thumbs { position:sticky; top:112px; display:flex; flex-direction:column; gap:10px; }
+    .thumbs a { position:relative; display:block; border-radius:12px; overflow:hidden; border:2px solid transparent; box-shadow:0 8px 22px rgba(31,7,94,.12); background:#fff; }
+    .thumbs a:hover { border-color:var(--green); }
+    .thumbs img { display:block; width:100%; height:auto; }
+    .thumbs span { position:absolute; top:6px; right:6px; background:var(--purple); color:white; font-size:12px; font-weight:900; padding:4px 6px; border-radius:999px; }
+    footer { padding:30px 0; color:var(--muted); text-align:center; font-size:13px; }
     @media (max-width: 860px) {
-      .topbar-inner, .hero { grid-template-columns:1fr; }
-      .topbar-inner { align-items:flex-start; }
-      .hero { margin-top:20px; }
-      .meta-grid { grid-template-columns:1fr 1fr; }
-      .nav { justify-content:flex-start; }
-    }
-    @media (max-width: 540px) {
-      .meta-grid { grid-template-columns:1fr; }
-      .card { border-radius:18px; padding:10px; margin:16px 0; }
-      .card-head { align-items:flex-start; }
-      .badge { min-width:46px; height:46px; font-size:20px; border-radius:12px; }
+      .layout { grid-template-columns:1fr; }
+      .thumbs { position:static; display:grid; grid-template-columns:repeat(5,1fr); order:-1; }
+      .hero { align-items:flex-start; flex-direction:column; }
+      .page-card { padding:8px; border-radius:16px; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <div class="brand-mark">CL</div>
-        <div>股貨宅CanLin｜戰略情報簡報<small>2026.07.08｜股貨宅觀點整合＋期靈王第十頁</small></div>
+  <header>
+    <div class="wrap">
+      <div class="hero">
+        <div class="brand">
+          <h1>股貨宅CanLin｜戰略情報簡報</h1>
+          <p>2026/07/08｜7/8 股貨宅整合圖卡＋期靈王31 Plus 台指期夜盤</p>
+        </div>
+        <div class="badge">10 頁圖卡</div>
       </div>
-      <nav class="nav" aria-label="頁面導覽">
-        <a href="#p01">01</a>
-<a href="#p02">02</a>
-<a href="#p03">03</a>
-<a href="#p04">04</a>
-<a href="#p05">05</a>
-<a href="#p06">06</a>
-<a href="#p07">07</a>
-<a href="#p08">08</a>
-<a href="#p09">09</a>
-<a href="#p10">10</a>
+      <nav aria-label="頁面導覽">
+        <a href="#page-01">01</a><a href="#page-02">02</a><a href="#page-03">03</a><a href="#page-04">04</a><a href="#page-05">05</a><a href="#page-06">06</a><a href="#page-07">07</a><a href="#page-08">08</a><a href="#page-09">09</a><a href="#page-10">10</a>
       </nav>
     </div>
   </header>
-
-  <section class="hero">
-    <div>
-      <h1>台股急跌不是終點<br><span>主流換股才是重點</span></h1>
-      <p>完整保真整合 4 位股貨宅觀點，並將附圖作為第 10 頁期靈王台指期夜盤。此頁可直接部署為 GitHub Pages。</p>
-    </div>
-    <aside class="meta-panel" aria-label="核心數據">
-      <div class="meta-grid">
-        <div class="metric"><b>10</b><span>獨立圖卡頁數</span></div>
-        <div class="metric"><b>3:4</b><span>1086 × 1448 圖卡比例</span></div>
-        <div class="metric"><b>2,850億</b><span>外資四天賣超觀察</span></div>
-        <div class="metric"><b>384%</b><span>6 月新增開戶年增</span></div>
-      </div>
-    </aside>
-  </section>
-
-  <section class="notice">
-    <div class="notice-inner">
-      操作總結：持強、分批、等確認；急跌不亂接，反彈不追滿，等壓力站回與事件確認後再加碼。
-    </div>
-  </section>
-
   <main>
-    
-        <article class="card" id="p01">
-          <div class="card-head">
-            <span class="badge">01</span>
-            <div>
-              <h2>台股急跌不是終點，主流換股才是重點</h2>
-              <p>去槓桿 × 融資清洗 × 主流輪動 × AI下半場</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-01.png" target="_blank" rel="noopener">
-            <img src="assets/page-01.png" alt="第 01 頁｜台股急跌不是終點，主流換股才是重點" loading="eager">
-          </a>
-        </article>
-
-        <article class="card" id="p02">
-          <div class="card-head">
-            <span class="badge">02</span>
-            <div>
-              <h2>不是猜低點，而是看整理是否完成</h2>
-              <p>月線整理 × 事件觀察 × 結構修復</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-02.png" target="_blank" rel="noopener">
-            <img src="assets/page-02.png" alt="第 02 頁｜不是猜低點，而是看整理是否完成" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p03">
-          <div class="card-head">
-            <span class="badge">03</span>
-            <div>
-              <h2>現貨關卡地圖：先看支撐，再看突破</h2>
-              <p>安全邊際 × 確認訊號 × 上下路徑</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-03.png" target="_blank" rel="noopener">
-            <img src="assets/page-03.png" alt="第 03 頁｜現貨關卡地圖：先看支撐，再看突破" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p04">
-          <div class="card-head">
-            <span class="badge">04</span>
-            <div>
-              <h2>台積電是大盤槓桿，估值推演看上方空間</h2>
-              <p>44% 權重 × 目標價上修 × 50,000 點想像</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-04.png" target="_blank" rel="noopener">
-            <img src="assets/page-04.png" alt="第 04 頁｜台積電是大盤槓桿，估值推演看上方空間" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p05">
-          <div class="card-head">
-            <span class="badge">05</span>
-            <div>
-              <h2>第三季主流路鏈：資金往下一棒移動</h2>
-              <p>先主幹 × 再支線 × 再低位接棒</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-05.png" target="_blank" rel="noopener">
-            <img src="assets/page-05.png" alt="第 05 頁｜第三季主流路鏈：資金往下一棒移動" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p06">
-          <div class="card-head">
-            <span class="badge">06</span>
-            <div>
-              <h2>族群強弱不是感覺，而是看驗證條件</h2>
-              <p>結構 × 驗證 × 風險 × 操作</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-06.png" target="_blank" rel="noopener">
-            <img src="assets/page-06.png" alt="第 06 頁｜族群強弱不是感覺，而是看驗證條件" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p07">
-          <div class="card-head">
-            <span class="badge">07</span>
-            <div>
-              <h2>不是撿所有下跌股，而是挑真正的鑽石</h2>
-              <p>營收 × 位階 × 題材 × 支撐</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-07.png" target="_blank" rel="noopener">
-            <img src="assets/page-07.png" alt="第 07 頁｜不是撿所有下跌股，而是挑真正的鑽石" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p08">
-          <div class="card-head">
-            <span class="badge">08</span>
-            <div>
-              <h2>三套劇本先寫好，市場來了照表執行</h2>
-              <p>樂觀突破 × 中性整理 × 保守防守</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-08.png" target="_blank" rel="noopener">
-            <img src="assets/page-08.png" alt="第 08 頁｜三套劇本先寫好，市場來了照表執行" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p09">
-          <div class="card-head">
-            <span class="badge">09</span>
-            <div>
-              <h2>明日不是猜漲跌，而是驗證六個訊號</h2>
-              <p>外資 × 融資 × 台積電 × 主流量價 × 韓股美光 × 關鍵關卡</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-09.png" target="_blank" rel="noopener">
-            <img src="assets/page-09.png" alt="第 09 頁｜明日不是猜漲跌，而是驗證六個訊號" loading="lazy">
-          </a>
-        </article>
-
-        <article class="card" id="p10">
-          <div class="card-head">
-            <span class="badge">10</span>
-            <div>
-              <h2>期靈王31 Plus：台指期夜盤戰情圖</h2>
-              <p>根根／期靈王觀點：台指期夜盤條件路徑與風控</p>
-            </div>
-          </div>
-          <a class="image-link" href="assets/page-10.png" target="_blank" rel="noopener">
-            <img src="assets/page-10.png" alt="第 10 頁｜期靈王31 Plus：台指期夜盤戰情圖" loading="lazy">
-          </a>
-        </article>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>© 股貨宅CanLin｜戰略情報簡報｜<b>僅供研究與紀錄，不構成投資建議。</b></div>
-      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到頂部</a>
+    <div class="wrap">
+      <div class="notice">已修正：第 01～09 頁皆為 2026.07.08 圖卡，第 10 頁為你提供的期靈王31 Plus 台指期夜盤。</div>
+      <div class="layout">
+        <div class="pages">
+      <section class="page-card" id="page-01">
+        <div class="page-head"><span>01/10</span><strong>台股急跌不是終點｜主流換股才是重點</strong></div>
+        <img src="assets/page-01.png" alt="台股急跌不是終點｜主流換股才是重點" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-02">
+        <div class="page-head"><span>02/10</span><strong>不是猜低點｜而是看整理是否完成</strong></div>
+        <img src="assets/page-02.png" alt="不是猜低點｜而是看整理是否完成" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-03">
+        <div class="page-head"><span>03/10</span><strong>現貨關卡地圖｜先看支撐，再看突破</strong></div>
+        <img src="assets/page-03.png" alt="現貨關卡地圖｜先看支撐，再看突破" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-04">
+        <div class="page-head"><span>04/10</span><strong>台積電是大盤槓桿｜估值推演看上方空間</strong></div>
+        <img src="assets/page-04.png" alt="台積電是大盤槓桿｜估值推演看上方空間" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-05">
+        <div class="page-head"><span>05/10</span><strong>第三季主流路鏈｜資金往下一棒移動</strong></div>
+        <img src="assets/page-05.png" alt="第三季主流路鏈｜資金往下一棒移動" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-06">
+        <div class="page-head"><span>06/10</span><strong>族群強弱不是感覺｜而是看驗證條件</strong></div>
+        <img src="assets/page-06.png" alt="族群強弱不是感覺｜而是看驗證條件" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-07">
+        <div class="page-head"><span>07/10</span><strong>不是撿所有下跌股｜而是挑真正的鑽石</strong></div>
+        <img src="assets/page-07.png" alt="不是撿所有下跌股｜而是挑真正的鑽石" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-08">
+        <div class="page-head"><span>08/10</span><strong>三套劇本先寫好｜市場來了照表執行</strong></div>
+        <img src="assets/page-08.png" alt="三套劇本先寫好｜市場來了照表執行" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-09">
+        <div class="page-head"><span>09/10</span><strong>明日不是猜漲跌｜而是驗證六個訊號</strong></div>
+        <img src="assets/page-09.png" alt="明日不是猜漲跌｜而是驗證六個訊號" loading="lazy" />
+      </section>
+      <section class="page-card" id="page-10">
+        <div class="page-head"><span>10/10</span><strong>期靈王31 Plus｜台指期夜盤</strong></div>
+        <img src="assets/page-10.png" alt="期靈王31 Plus｜台指期夜盤" loading="lazy" />
+      </section>
+        </div>
+        <aside class="thumbs" aria-label="縮圖導覽">
+        <a href="#page-01"><img src="assets/page-01.png" alt="台股急跌不是終點｜主流換股才是重點"><span>01</span></a>
+        <a href="#page-02"><img src="assets/page-02.png" alt="不是猜低點｜而是看整理是否完成"><span>02</span></a>
+        <a href="#page-03"><img src="assets/page-03.png" alt="現貨關卡地圖｜先看支撐，再看突破"><span>03</span></a>
+        <a href="#page-04"><img src="assets/page-04.png" alt="台積電是大盤槓桿｜估值推演看上方空間"><span>04</span></a>
+        <a href="#page-05"><img src="assets/page-05.png" alt="第三季主流路鏈｜資金往下一棒移動"><span>05</span></a>
+        <a href="#page-06"><img src="assets/page-06.png" alt="族群強弱不是感覺｜而是看驗證條件"><span>06</span></a>
+        <a href="#page-07"><img src="assets/page-07.png" alt="不是撿所有下跌股｜而是挑真正的鑽石"><span>07</span></a>
+        <a href="#page-08"><img src="assets/page-08.png" alt="三套劇本先寫好｜市場來了照表執行"><span>08</span></a>
+        <a href="#page-09"><img src="assets/page-09.png" alt="明日不是猜漲跌｜而是驗證六個訊號"><span>09</span></a>
+        <a href="#page-10"><img src="assets/page-10.png" alt="期靈王31 Plus｜台指期夜盤"><span>10</span></a>
+        </aside>
+      </div>
     </div>
-  </footer>
+  </main>
+  <footer>本簡報僅供研究紀錄，不構成任何投資建議。</footer>
 </body>
 </html>
