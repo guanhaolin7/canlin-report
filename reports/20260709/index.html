@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CanLin 戰略情報簡報｜2026/07/09</title>
+  <meta name="description" content="2026/07/09 CanLin 戰略情報簡報，10頁圖卡 GitHub Pages 輸出。" />
+  <style>
+    :root {
+      --purple: #25105b;
+      --purple-2: #3b168b;
+      --green: #73e000;
+      --ink: #111;
+      --paper: #f7f7fb;
+      --line: rgba(37, 16, 91, .22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(115,224,0,.14), transparent 28rem),
+        radial-gradient(circle at top right, rgba(59,22,139,.18), transparent 30rem),
+        var(--paper);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 3px solid var(--purple);
+    }
+    .topbar {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 22px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-weight: 900;
+      color: var(--purple);
+      letter-spacing: .02em;
+      font-size: clamp(20px, 3vw, 32px);
+      line-height: 1.15;
+    }
+    .date-pill {
+      background: var(--purple);
+      color: #fff;
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 22px 18px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 86px);
+      line-height: 1.02;
+      font-weight: 1000;
+      letter-spacing: -.05em;
+    }
+    .hero p {
+      margin: 14px 0 0;
+      font-size: clamp(18px, 2.8vw, 32px);
+      font-weight: 900;
+      color: var(--purple);
+    }
+    .hero strong { color: var(--green); }
+    nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 22px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    nav a {
+      width: 48px;
+      height: 40px;
+      display: inline-grid;
+      place-items: center;
+      border: 2px solid var(--purple);
+      border-radius: 12px;
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 900;
+      background: #fff;
+    }
+    nav a:hover {
+      background: var(--purple);
+      color: #fff;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto 72px;
+      padding: 0 22px;
+    }
+    .card-section {
+      margin: 0 0 34px;
+      padding: clamp(14px, 2vw, 24px);
+      background: rgba(255,255,255,.96);
+      border: 2px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 18px 46px rgba(28, 14, 70, .13);
+    }
+    .card-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid rgba(37,16,91,.14);
+      padding-bottom: 14px;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      background: var(--purple);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-weight: 1000;
+      letter-spacing: .08em;
+      font-size: 13px;
+    }
+    h2 {
+      margin: 8px 0 2px;
+      font-size: clamp(24px, 4vw, 46px);
+      line-height: 1.08;
+      font-weight: 1000;
+      letter-spacing: -.04em;
+    }
+    .card-head p {
+      margin: 0;
+      color: var(--purple);
+      font-weight: 850;
+      font-size: clamp(15px, 2vw, 22px);
+    }
+    .open-img {
+      flex: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--purple), var(--purple-2));
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 850;
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+    }
+    .card-section img {
+      display: block;
+      width: min(100%, 760px);
+      height: auto;
+      margin: 0 auto;
+      border-radius: 18px;
+      border: 1px solid rgba(37,16,91,.18);
+      background: #fff;
+    }
+    footer {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 22px 54px;
+      color: rgba(37,16,91,.72);
+      font-weight: 700;
+      text-align: center;
+    }
+    @media (max-width: 720px) {
+      .topbar, .card-head { align-items: flex-start; flex-direction: column; }
+      .open-img { width: 100%; text-align: center; }
+      nav a { flex: 1 0 42px; }
+      .card-section { border-radius: 18px; }
+      .card-section img { border-radius: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">股貨宅CanLin｜戰略情報簡報</div>
+      <div class="date-pill">2026.07.09｜10 Pages</div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>台股不是逃命盤，<br>是等碼換手與第三季接棒</h1>
+    <p>現貨圖卡 01–09 ＋ <strong>期靈王夜盤</strong> 10</p>
+  </div>
+
+  <nav aria-label="圖卡頁碼導覽">
+    <a href="#p01">01</a>
+<a href="#p02">02</a>
+<a href="#p03">03</a>
+<a href="#p04">04</a>
+<a href="#p05">05</a>
+<a href="#p06">06</a>
+<a href="#p07">07</a>
+<a href="#p08">08</a>
+<a href="#p09">09</a>
+<a href="#p10">10</a>
+  </nav>
+
+  <main>
+    
+    <section class="card-section" id="p01">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 01</span>
+          <h2>台股不是逃命盤</h2>
+          <p>外資提款 × 籌碼換手 × 第三季接棒</p>
+        </div>
+        <a class="open-img" href="assets/page01.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page01.png" alt="台股不是逃命盤" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p02">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 02</span>
+          <h2>轉折看 7/14～7/16</h2>
+          <p>CPI × 法說 × 科技財報</p>
+        </div>
+        <a class="open-img" href="assets/page02.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page02.png" alt="轉折看 7/14～7/16" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p03">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 03</span>
+          <h2>主圖只看結構</h2>
+          <p>月季線區間 × 盤底訊號 × 起攻確認</p>
+        </div>
+        <a class="open-img" href="assets/page03.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page03.png" alt="主圖只看結構" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p04">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 04</span>
+          <h2>量能決定變盤方向</h2>
+          <p>1兆門檻 × 外資提款 × 融資清洗</p>
+        </div>
+        <a class="open-img" href="assets/page04.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page04.png" alt="量能決定變盤方向" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p05">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 05</span>
+          <h2>第三季接棒路線圖</h2>
+          <p>已大漲當風向｜未輪動找機會</p>
+        </div>
+        <a class="open-img" href="assets/page05.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page05.png" alt="第三季接棒路線圖" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p06">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 06</span>
+          <h2>接棒焦點矩陣</h2>
+          <p>第三季題材 × 整理位階 × 確認訊號</p>
+        </div>
+        <a class="open-img" href="assets/page06.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page06.png" alt="接棒焦點矩陣" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p07">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 07</span>
+          <h2>接棒股看三件事</h2>
+          <p>位階 × 題材 × 確認</p>
+        </div>
+        <a class="open-img" href="assets/page07.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page07.png" alt="接棒股看三件事" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p08">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 08</span>
+          <h2>三劇本操作地圖</h2>
+          <p>樂觀 × 中性 × 防守</p>
+        </div>
+        <a class="open-img" href="assets/page08.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page08.png" alt="三劇本操作地圖" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p09">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 09</span>
+          <h2>明日不是猜漲跌</h2>
+          <p>驗證四訊號 × 鎖定接棒 × 等確認</p>
+        </div>
+        <a class="open-img" href="assets/page09.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page09.png" alt="明日不是猜漲跌" loading="lazy" />
+    </section>
+    
+
+    <section class="card-section" id="p10">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">PAGE 10</span>
+          <h2>期靈王31 Plus 台指期夜盤</h2>
+          <p>台積電不死、大盤不死｜三線反壓未解</p>
+        </div>
+        <a class="open-img" href="assets/page10.png" target="_blank" rel="noopener">開啟原圖</a>
+      </div>
+      <img src="assets/page10.png" alt="期靈王31 Plus 台指期夜盤" loading="lazy" />
+    </section>
+    
+  </main>
+
+  <footer>
+    本頁僅彙整使用者提供之圖卡內容，供研究與複盤參考，不構成任何投資建議。
+  </footer>
+</body>
+</html>
