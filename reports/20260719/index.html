@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#24105f">
+  <meta name="description" content="股貨宅 CanLin｜2026/07/20～2026/07/31 台股戰略情報簡報">
+  <title>股貨宅 CanLin｜戰略情報簡報</title>
+  <style>
+    :root {
+      --bg: #f7f8fc;
+      --card: #ffffff;
+      --purple: #4b19d8;
+      --deep-purple: #24105f;
+      --green: #9dff2e;
+      --ink: #171323;
+      --muted: #6e6781;
+      --line: rgba(75, 25, 216, .14);
+      --shadow: 0 14px 34px rgba(36, 16, 95, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(75, 25, 216, .08), transparent 30rem),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                   "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 248, 252, .94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(36, 16, 95, .07);
+    }
+
+    .topbar-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 12px 14px 10px;
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      min-width: 0;
+      font-weight: 900;
+      letter-spacing: .01em;
+      color: var(--deep-purple);
+      font-size: clamp(16px, 3.6vw, 23px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .page-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 1px 1px 3px;
+      scrollbar-width: none;
+      overscroll-behavior-inline: contain;
+    }
+
+    .page-nav::-webkit-scrollbar { display: none; }
+
+    .page-tab {
+      flex: 0 0 auto;
+      min-width: 45px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--deep-purple);
+      background: #fff;
+      border: 1px solid rgba(75, 25, 216, .20);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 3px 10px rgba(36, 16, 95, .06);
+    }
+
+    .page-tab:hover,
+    .page-tab:focus-visible,
+    .page-tab.active {
+      color: var(--deep-purple);
+      background: var(--green);
+      border-color: var(--green);
+      outline: none;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 14px 10px;
+    }
+
+    .report-card {
+      margin: 0 0 28px;
+      scroll-margin-top: 94px;
+      background: var(--card);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(75, 25, 216, .10);
+    }
+
+    .report-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    figcaption {
+      padding: 12px 16px 14px;
+      color: var(--deep-purple);
+      background: #fff;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 14px 36px;
+    }
+
+    .disclaimer {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 18px;
+      padding: 20px 22px 20px 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(75, 25, 216, .10);
+      color: #514a61;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .disclaimer::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 7px;
+      background: var(--green);
+    }
+
+    .disclaimer strong {
+      display: block;
+      color: var(--deep-purple);
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--purple);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      html { scroll-padding-top: 86px; }
+      .topbar-inner { padding-inline: 10px; }
+      .date { display: none; }
+      main { padding: 18px 8px 8px; }
+      .report-card {
+        margin-bottom: 18px;
+        border-radius: 14px;
+        box-shadow: 0 10px 24px rgba(36, 16, 95, .12);
+      }
+      figcaption { font-size: 12px; padding: 10px 12px 12px; }
+      footer { padding-inline: 8px; }
+      .disclaimer { border-radius: 14px; padding: 17px 17px 17px 23px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-row">
+        <div class="brand">股貨宅 CanLin｜戰略情報簡報</div>
+        <div class="date">2026/07/20～2026/07/31</div>
+      </div>
+      <nav class="page-nav" aria-label="圖卡頁面導覽">
+        <a class="page-tab" href="#page01" aria-label="前往第 01 頁">01</a>
+        <a class="page-tab" href="#page02" aria-label="前往第 02 頁">02</a>
+        <a class="page-tab" href="#page03" aria-label="前往第 03 頁">03</a>
+        <a class="page-tab" href="#page04" aria-label="前往第 04 頁">04</a>
+        <a class="page-tab" href="#page05" aria-label="前往第 05 頁">05</a>
+        <a class="page-tab" href="#page06" aria-label="前往第 06 頁">06</a>
+        <a class="page-tab" href="#page07" aria-label="前往第 07 頁">07</a>
+        <a class="page-tab" href="#page08" aria-label="前往第 08 頁">08</a>
+        <a class="page-tab" href="#page09" aria-label="前往第 09 頁">09</a>
+        <a class="page-tab" href="#page10" aria-label="前往第 10 頁">10</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+      <figure class="report-card" id="page01">
+        <img src="assets/page01.jpg"
+             alt="史詩級洗盤後，先看反彈 再等真正落底"
+             width="1086" height="1448"
+             loading="eager"
+             decoding="async">
+        <figcaption>01｜史詩級洗盤後，先看反彈 再等真正落底</figcaption>
+      </figure>
+      <figure class="report-card" id="page02">
+        <img src="assets/page02.jpg"
+             alt="兩週關鍵觀察｜財報、籌碼、反彈驗證"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>02｜兩週關鍵觀察｜財報、籌碼、反彈驗證</figcaption>
+      </figure>
+      <figure class="report-card" id="page03">
+        <img src="assets/page03.jpg"
+             alt="現貨結構｜先守 42,671，再看能否收復季線"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>03｜現貨結構｜先守 42,671，再看能否收復季線</figcaption>
+      </figure>
+      <figure class="report-card" id="page04">
+        <img src="assets/page04.jpg"
+             alt="籌碼與歷史統計｜先看賣壓是否收斂"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>04｜籌碼與歷史統計｜先看賣壓是否收斂</figcaption>
+      </figure>
+      <figure class="report-card" id="page05">
+        <img src="assets/page05.jpg"
+             alt="權值核心｜台積電仍是主軸，但市場正在重估"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>05｜權值核心｜台積電仍是主軸，但市場正在重估</figcaption>
+      </figure>
+      <figure class="report-card" id="page06">
+        <img src="assets/page06.jpg"
+             alt="接棒族群｜被動元件、記憶體、成熟製程"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>06｜接棒族群｜被動元件、記憶體、成熟製程</figcaption>
+      </figure>
+      <figure class="report-card" id="page07">
+        <img src="assets/page07.jpg"
+             alt="三套劇本｜樂觀、中性、防守"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>07｜三套劇本｜樂觀、中性、防守</figcaption>
+      </figure>
+      <figure class="report-card" id="page08">
+        <img src="assets/page08.jpg"
+             alt="資金配置與操作 SOP"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>08｜資金配置與操作 SOP</figcaption>
+      </figure>
+      <figure class="report-card" id="page09">
+        <img src="assets/page09.jpg"
+             alt="明日驗證 Checklist"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>09｜明日驗證 Checklist</figcaption>
+      </figure>
+      <figure class="report-card" id="page10">
+        <img src="assets/page10.jpg"
+             alt="台指期戰術圖｜期靈王觀點"
+             width="1086" height="1448"
+             loading="lazy"
+             decoding="async">
+        <figcaption>10｜台指期戰術圖｜期靈王觀點</figcaption>
+      </figure>
+  </main>
+
+  <footer>
+    <div class="disclaimer">
+      <strong>投資風險提醒</strong>
+      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險。
+      <br>
+      <a class="back-top" href="#top">返回頁首 ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const tabs = [...document.querySelectorAll('.page-tab')];
+      const cards = [...document.querySelectorAll('.report-card')];
+
+      const setActive = (id) => {
+        tabs.forEach(tab => {
+          const active = tab.getAttribute('href') === '#' + id;
+          tab.classList.toggle('active', active);
+          if (active) tab.scrollIntoView({inline: 'center', block: 'nearest'});
+        });
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(visible.target.id);
+      }, {
+        rootMargin: '-18% 0px -62% 0px',
+        threshold: [0.05, 0.25, 0.5]
+      });
+
+      cards.forEach(card => observer.observe(card));
+      setActive('page01');
+    })();
+  </script>
+</body>
+</html>
