@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#24105F">
+  <meta name="description" content="股貨宅CanLin｜2026/07/23–07/24 戰略情報簡報">
+  <title>股貨宅CanLin｜戰略情報簡報｜2026/07/23–07/24</title>
+  <style>
+    :root {
+      --purple: #4B19D8;
+      --deep-purple: #24105F;
+      --green: #79EE13;
+      --bg: #F5F6FA;
+      --card: #FFFFFF;
+      --text: #1B1530;
+      --muted: #6D6880;
+      --shadow: 0 14px 38px rgba(36,16,95,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 112px; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(75,25,216,.08), transparent 28rem),
+        var(--bg);
+    }
+    .site-header {
+      background: linear-gradient(135deg, var(--deep-purple), var(--purple));
+      color: white;
+      padding: 22px max(20px, env(safe-area-inset-left)) 18px;
+      box-shadow: 0 8px 28px rgba(36,16,95,.2);
+    }
+    .header-inner { max-width: 980px; margin: auto; }
+    .brand { font-weight: 900; font-size: clamp(22px, 4vw, 34px); letter-spacing: .02em; }
+    .meta { margin-top: 8px; color: rgba(255,255,255,.78); font-weight: 700; }
+    .nav-shell {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245,246,250,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(36,16,95,.1);
+      padding: 12px 0;
+    }
+    .page-nav {
+      max-width: 980px;
+      margin: auto;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 0 18px 2px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .page-nav::-webkit-scrollbar { display: none; }
+    .page-nav a {
+      flex: 0 0 auto;
+      min-width: 48px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--deep-purple);
+      background: white;
+      border: 1px solid rgba(75,25,216,.18);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 900;
+      box-shadow: 0 5px 14px rgba(36,16,95,.07);
+      transition: .2s ease;
+    }
+    .page-nav a:hover, .page-nav a.active {
+      background: var(--deep-purple);
+      color: var(--green);
+      transform: translateY(-1px);
+    }
+    main { max-width: 980px; margin: 28px auto 0; padding: 0 18px 54px; }
+    .intro {
+      background: white;
+      border-radius: 18px;
+      padding: 20px 22px;
+      margin-bottom: 28px;
+      border-left: 6px solid var(--green);
+      box-shadow: var(--shadow);
+    }
+    .intro strong { color: var(--deep-purple); }
+    .page-card {
+      position: relative;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin: 0 0 28px;
+      overflow: hidden;
+      border: 1px solid rgba(36,16,95,.08);
+    }
+    .page-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: white;
+    }
+    .page-label {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: rgba(36,16,95,.9);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      box-shadow: 0 6px 14px rgba(36,16,95,.2);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .page-card:hover .page-label { opacity: 1; }
+    footer { max-width: 980px; margin: 0 auto 50px; padding: 0 18px; }
+    .disclaimer {
+      background: white;
+      border-radius: 18px;
+      border-left: 7px solid var(--green);
+      box-shadow: var(--shadow);
+      padding: 22px 24px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 650;
+    }
+    .disclaimer strong { color: var(--deep-purple); display: block; margin-bottom: 4px; }
+    .back-top {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right));
+      bottom: max(18px, env(safe-area-inset-bottom));
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--deep-purple);
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(36,16,95,.28);
+    }
+    @media (max-width: 600px) {
+      .site-header { padding-top: 18px; }
+      .meta { font-size: 14px; }
+      main { padding-left: 12px; padding-right: 12px; }
+      .page-card { border-radius: 14px; margin-bottom: 20px; }
+      .page-label { display: none; }
+      .intro { border-radius: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .page-nav a { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <div class="brand">股貨宅CanLin｜戰略情報簡報</div>
+      <div class="meta">2026/07/23–07/24｜急跌後築底換手 × 低位階 AI 接棒 × 期靈王期貨觀點</div>
+    </div>
+  </header>
+
+  <div class="nav-shell" aria-label="頁面導覽">
+    <nav class="page-nav">
+        <a href="#page01" data-page="01">01</a>
+        <a href="#page02" data-page="02">02</a>
+        <a href="#page03" data-page="03">03</a>
+        <a href="#page04" data-page="04">04</a>
+        <a href="#page05" data-page="05">05</a>
+        <a href="#page06" data-page="06">06</a>
+        <a href="#page07" data-page="07">07</a>
+        <a href="#page08" data-page="08">08</a>
+        <a href="#page09" data-page="09">09</a>
+        <a href="#page10" data-page="10">10</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="intro"><strong>閱讀方式</strong>　左右滑動上方頁碼快速跳頁；每張圖卡固定以 3:4 完整呈現，不裁切、不自動重排。</div>
+      <section class="page-card" id="page01" data-page="01">
+        <div class="page-label">PAGE 01 / 10</div>
+        <img src="assets/page01.jpg" alt="CanLin 戰略情報簡報第 01 頁" fetchpriority="high" decoding="async">
+      </section>
+      <section class="page-card" id="page02" data-page="02">
+        <div class="page-label">PAGE 02 / 10</div>
+        <img src="assets/page02.jpg" alt="CanLin 戰略情報簡報第 02 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page03" data-page="03">
+        <div class="page-label">PAGE 03 / 10</div>
+        <img src="assets/page03.jpg" alt="CanLin 戰略情報簡報第 03 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page04" data-page="04">
+        <div class="page-label">PAGE 04 / 10</div>
+        <img src="assets/page04.jpg" alt="CanLin 戰略情報簡報第 04 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page05" data-page="05">
+        <div class="page-label">PAGE 05 / 10</div>
+        <img src="assets/page05.jpg" alt="CanLin 戰略情報簡報第 05 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page06" data-page="06">
+        <div class="page-label">PAGE 06 / 10</div>
+        <img src="assets/page06.jpg" alt="CanLin 戰略情報簡報第 06 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page07" data-page="07">
+        <div class="page-label">PAGE 07 / 10</div>
+        <img src="assets/page07.jpg" alt="CanLin 戰略情報簡報第 07 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page08" data-page="08">
+        <div class="page-label">PAGE 08 / 10</div>
+        <img src="assets/page08.jpg" alt="CanLin 戰略情報簡報第 08 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page09" data-page="09">
+        <div class="page-label">PAGE 09 / 10</div>
+        <img src="assets/page09.jpg" alt="CanLin 戰略情報簡報第 09 頁" loading="lazy" decoding="async">
+      </section>
+      <section class="page-card" id="page10" data-page="10">
+        <div class="page-label">PAGE 10 / 10</div>
+        <img src="assets/page10.jpg" alt="CanLin 戰略情報簡報第 10 頁" loading="lazy" decoding="async">
+      </section>
+  </main>
+
+  <footer>
+    <div class="disclaimer">
+      <strong>風險聲明</strong>
+      本簡報內容僅供參考，不構成任何投資建議。投資人應獨立判斷，審慎評估並自負風險
+    </div>
+  </footer>
+
+  <a class="back-top" href="#top" aria-label="回到頂端">↑</a>
+
+  <script>
+    const navLinks = [...document.querySelectorAll('.page-nav a')];
+    const sections = [...document.querySelectorAll('.page-card')];
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const page = entry.target.dataset.page;
+        navLinks.forEach(link => link.classList.toggle('active', link.dataset.page === page));
+        const active = navLinks.find(link => link.dataset.page === page);
+        active?.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+      });
+    }, {rootMargin: '-30% 0px -60% 0px', threshold: 0});
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
