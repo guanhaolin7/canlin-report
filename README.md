@@ -4,6 +4,7 @@
 
 ## 報告入口
 
+- [20260723 報告](https://guanhaolin7.github.io/canlin-report/reports/20260723/)
 - [20260719 報告](https://guanhaolin7.github.io/canlin-report/reports/20260719/)
 - [20260709 報告](https://guanhaolin7.github.io/canlin-report/reports/20260709/)
 - [20260708 報告](https://guanhaolin7.github.io/canlin-report/reports/20260708/)
